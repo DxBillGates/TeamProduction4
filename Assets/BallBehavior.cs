@@ -65,10 +65,11 @@ public class BallBehavior : MonoBehaviour
 
     void Jump()
     {
+        float jumpPower = 100;
         if (!isJump)
         {
             isJump = true;
-            rb.AddForce(transform.up.normalized * 100);
+            rb.AddForce(transform.up.normalized * jumpPower);
             Debug.Log("jump");
         }
     }
